@@ -1,0 +1,18 @@
+[package]
+name = "kernel-driver"
+version = "0.1.1"
+edition = "2021"
+authors = ["Ashik U A <ashik.unni@yahoo.com>"]
+
+[profile.dev]
+panic = "abort"
+[profile.release]
+panic = "abort"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+winreg = "0.10"
+failure = "0.1.8"
